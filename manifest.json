@@ -1,0 +1,32 @@
+﻿{
+  "manifest_version": 3,
+  "name": "LearnLog",
+  "version": "0.1.0",
+  "description": "Capture and review daily learnings.",
+  "permissions": ["storage", "unlimitedStorage", "contextMenus", "commands", "scripting", "activeTab", "alarms", "offscreen"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/dark/icon16.png",
+      "48": "icons/dark/icon48.png",
+      "128": "icons/dark/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "capture-selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L"
+      },
+      "description": "Capture selected text as a learning"
+    }
+  }
+}

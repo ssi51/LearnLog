@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LearnLog Review</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #121212;
+      color: #ccc;
+      font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .card {
+      max-width: 60ch;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 20px;
+      line-height: 1.6;
+      text-align: center;
+      padding: 32px;
+    }
+    .source {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #666;
+    }
+    .source a {
+      color: #7a8cff;
+      text-decoration: none;
+    }
+    .source a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="card" class="card"></div>
+  <script type="module" src="review.js"></script>
+</body>
+</html>

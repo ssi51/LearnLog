@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LearnLog List</title>
+  <style>
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #121212;
+      color: #ccc;
+      font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      padding: 32px 24px;
+      box-sizing: border-box;
+    }
+    .toolbar {
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    select, input[type="text"] {
+      background: #1a1a1a;
+      color: #ccc;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 7px 10px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #555;
+    }
+    .list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .item {
+      background: #1a1a1a;
+      border: 1px solid #262626;
+      border-left: 4px solid #444;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #ddd;
+    }
+    .meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #777;
+    }
+    .meta select {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+    .meta a {
+      color: #7a8cff;
+      text-decoration: none;
+    }
+    .meta a:hover {
+      text-decoration: underline;
+    }
+    .reviewed {
+      cursor: pointer;
+    }
+    .reviewed:hover {
+      color: #aaa;
+    }
+    .delete {
+      cursor: pointer;
+      margin-left: auto;
+    }
+    .delete:hover {
+      color: #aaa;
+    }
+    .divider {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #666;
+      margin: 8px 2px 4px;
+    }
+    .divider:first-child {
+      margin-top: 0;
+    }
+    .empty {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #666;
+      text-align: center;
+      padding: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <div class="filters">
+      <select id="filter"></select>
+      <select id="when"></select>
+      <select id="status"></select>
+      <select id="source"></select>
+    </div>
+    <input type="text" id="query" placeholder="Search...">
+  </div>
+  <div id="list" class="list"></div>
+  <script type="module" src="list.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LearnLog</title>
+  <style>
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 14px;
+      background: #1a1a1a;
+      color: #eee;
+      font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    textarea {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 100px;
+      resize: vertical;
+      background: #111;
+      color: #eee;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 10px;
+      font-size: 14px;
+      font-family: inherit;
+      line-height: 1.5;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #555;
+    }
+    select {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 8px;
+      padding: 7px 10px;
+      background: #111;
+      color: #ccc;
+      border: 1px solid #333;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+    button {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #2d3447;
+      color: #eee;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    button:hover {
+      background: #3a4258;
+    }
+    .secondary {
+      background: transparent;
+      border: 1px solid #333;
+      color: #aaa;
+    }
+    .secondary:hover {
+      background: #222;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .links a {
+      font-size: 13px;
+      color: #777;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .links a:hover {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="text" placeholder="What did you learn?" autofocus></textarea>
+  <select id="category"></select>
+  <button id="save">Save</button>
+  <button id="export" class="secondary">Export Today</button>
+  <div class="links">
+    <a id="list">List</a>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
